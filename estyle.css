@@ -1,0 +1,15 @@
+html body{
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: aqua;
+}
+div{
+    border: 1px solid #F00;
+    align-self: center;
+}
+img{
+
+    height: 100px;
+}
