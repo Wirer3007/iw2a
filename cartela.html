@@ -19,7 +19,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                    <td id="b1">10</td><!--B-->
+                    <td id="b1" onclick="marcarcartela(this)">10</td><!--B-->
                     <td id="i1">5</td><!--I-->
                     <td id="n1">14</td><!--N-->
                     <td id="g1">7</td><!--G-->
@@ -55,10 +55,35 @@
                 </tr>
                 </tbody>
             </table>
-        </body>
+            <br />
+
+            <button id="botao" onclick="piscar()">
+                <h1>click</h1>
+            
+            </button>
+        
     
         <script>
-          
+            
+        function piscar()
+        {
+            var botao = document.getElementById("botao");
+            
+            if(botao.style.backgroundColor =='red')
+            {
+              botao.style.backgroundColor = 'blue';
+            }else{
+                botao.style.backgroundColor = 'red';
+            }
+        }
+
+        function marcarcartela(td)
+        {
+            td.style.backgroundColor = 'black';
+            td.style.color = 'white';
+        }
         </script>
+ 
+    </body>
 
 </html>
