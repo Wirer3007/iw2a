@@ -59,9 +59,10 @@
 
             <button id="botao" onclick="piscar()">
                 <h1>click</h1>
-            
             </button>
-        
+            <button onclick="GerarCartela()" >
+                Gerar Cartela
+              </button>        
     
         <script>
             
@@ -82,6 +83,73 @@
             td.style.backgroundColor = 'black';
             td.style.color = 'white';
         }
+
+
+        function GerarCartela()
+    {
+      vetorB = MisturarArray( GerarVetor(1,15) )
+      vetorI =  MisturarArray( GerarVetor(16,30) )
+      vetorN =  MisturarArray ( GerarVetor(31,45) )
+      vetorG =  MisturarArray (GerarVetor(46,60) )
+      vetorO =  MisturarArray (GerarVetor(61,75) )
+      
+      for(var i = 0; i < 5; i++)
+      {
+        var td = document.getElementById("b"+(i+1) )
+        td.innerText = vetorB[i]
+        
+        td = document.getElementById("i"+(i+1) )
+        td.innerText = vetorI[i]
+
+        td = document.getElementById("n"+(i+1) )
+        td.innerText = vetorN[i]
+
+        td = document.getElementById("g"+(i+1) )
+        td.innerText = vetorG[i]
+
+        td = document.getElementById("o"+(i+1) )
+        td.innerText = vetorO[i]
+
+      }
+      
+
+    }
+
+    function GerarVetor(NumeroInicial,NumeroFinal )
+    {
+        vetor = []
+        for(var i = NumeroInicial; i <= NumeroFinal; i++)
+        {
+            vetor.push(i)
+        }
+        return vetor
+    }
+
+        function NumeroAleatorio(NumeroMinimo, NumeroMaximo){
+          var retorno = Math.floor(Math.random() * NumeroMaximo)
+          if (retorno > 0 && retorno >= NumeroMinimo && retorno <= NumeroMaximo)
+          {
+            return retorno
+          }else{
+            return NumeroAleatorio(NumeroMinimo, NumeroMaximo)
+          }
+        }
+        function MisturarArray(array){
+
+            var aleatorio
+            var cont = array.length
+            var auxiliar
+            while (cont != 0){
+                aleatorio = NumeroAleatorio(1, array.length)
+                cont--
+                auxiliar = array[cont]
+                array[cont] = array[aleatorio]
+                array[aleatorio] = auxiliar
+            }
+
+            return array
+        }
+
         </script>
  
     </body>
