@@ -31,7 +31,7 @@
     <script>
         function Clicar(){
         var cep = document.getElementById("cep")
-        var url = " viacep.com.br/ws/"+cep.value+"/json/"
+        var url = "https://viacep.com.br/ws/"+cep.value+"/json/"
         fetch(url)
         .then((resposta)=> resposta.json())
         .then((dados)=> {
