@@ -16,6 +16,12 @@ body, html{
     font-size: 50px;
     padding: 5px 5px;
 }
+
+.abc{
+
+    background-color: antiquewhite;
+    font-size: 50px;
+}
 td{
     border: 1px solid;
     border-radius: 5%;
