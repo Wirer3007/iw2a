@@ -236,7 +236,8 @@
           {
             return retorno
           }else{
-            return NumeroAleatorio(NumeroMinimo, NumeroMaximo)
+            return 
+          (NumeroMinimo, NumeroMaximo)
           }
         }
         function MisturarArray(array){
@@ -254,6 +255,20 @@
 
             return array
         }
+        function NumeroAleatorio(NumeroMinimo, NumeroMaximo){
+          var retorno = Math.floor(Math.random() * NumeroMaximo)
+          if (retorno > 0 && retorno >= NumeroMinimo && retorno <= NumeroMaximo)
+          {
+            return retorno
+          }else{
+            return 
+          (NumeroMinimo, NumeroMaximo)
+
+          document.write(return)
+
+          }
+        }
+
 
         </script>
  
