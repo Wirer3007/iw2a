@@ -56,10 +56,8 @@
                 </tbody>
 
                 <button id="botoe" onclick="sortear()">
-                    sortear bingo
-
+                    Sortear Bingo
                 </button>
-
                 
                 <button id="botao" onclick="piscar()">
                     <h1>click</h1>
@@ -68,8 +66,9 @@
                     Gerar Cartela
                   </button>        
         
-            </table >
-            <table class= "abc">
+                </table>
+
+            <table class="tabelinha" id="abc">
                 <tbody>
                     <tr>
                     <td id="a1">1</td>
@@ -236,8 +235,7 @@
           {
             return retorno
           }else{
-            return 
-          (NumeroMinimo, NumeroMaximo)
+            return NumeroAleatorio(NumeroMinimo, NumeroMaximo)
           }
         }
         function MisturarArray(array){
@@ -255,19 +253,21 @@
 
             return array
         }
-        function NumeroAleatorio(NumeroMinimo, NumeroMaximo){
-          var retorno = Math.floor(Math.random() * NumeroMaximo)
-          if (retorno > 0 && retorno >= NumeroMinimo && retorno <= NumeroMaximo)
-          {
-            return retorno
-          }else{
-            return 
-          (NumeroMinimo, NumeroMaximo)
 
-          document.write(return)
+        function sortear(){
 
-          }
+            vetortabela = MisturarArray( GerarVetor(1, 75) )
+
+              
+      for(var i = 0; i < 1; i++)
+      {
+        var td = document.getElementById("a"+(i+1) )
+        td.innerText = vetortabela[i]
+
+
+      
         }
+    }
 
 
         </script>
