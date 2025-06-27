@@ -2,6 +2,7 @@ const pokemonName = document.querySelector(".pokemon_nome");
 const pokemonNumber = document.querySelector(".pokemon_numero");
 const pokemonImg = document.querySelector(".pokemon__img");
 const pokemonTipo = document.querySelector(".tipagem");
+const pokemonTipo2 = document.querySelector(".tipinho");
 
 const form = document.querySelector(".form");
 const input = document.querySelector(".input_search");
@@ -41,6 +42,7 @@ const renderPokemon = async (pokemon) => {
       pokemonImg.src = data["sprites"]["versions"]["generation-v"]["black-white"]["animated"]["front_default"];
       searchPokemon = data.id;
       pokemonTipo.innerHTML = data['types']['0']['type']['name'];
+      pokemonTipo2.innerHTML = data['types']['1']['type']['name'];
 
      
 
@@ -78,4 +80,11 @@ ButtonNext.addEventListener('click', () => {
     renderPokemon(searchPokemon);
  
 });
+
+if(searchPokemon==50000){
+
+  pokemonName = "Fernando_Graciane";
+  pokemonNumber = 50000;
+  pokemonImg = ;
+}
 

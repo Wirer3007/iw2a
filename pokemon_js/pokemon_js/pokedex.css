@@ -11,6 +11,11 @@ body{
     text-align: center;
     background: linear-gradient(to bottom, rgb(173, 229, 236), rgb(236, 206, 206));
     min-height: 100vh;
+    background-image: image-set('./pokedex/fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
 
 }
 main{
@@ -33,19 +38,20 @@ main{
     position: absolute;
     left: 0;
     bottom: 53%;
-    left: 55%;
+    left: 52%;
     transform: translate(-63%,30%);
     height: -18%;
     width: 13%;
+    max-width: 13%;
 }
 .pokemon_data{
 
     position: absolute;
     font-weight: 600;
     color: rgb(94, 89, 83);
-    top: 51.5%;
-    right: 38%;
-    font-size: clamp(5px, 5vw, 18px);
+    top: 53.5%;
+    right: 41%;
+    font-size: clamp(100%, 5vw, 180%);
     
 
 }
@@ -53,9 +59,10 @@ main{
 .tipo{
 
     position: absolute;
-    top: 60%;
-    left: 47%;
+    top: 62%;
+    left: 46%;
     color: aliceblue;
+    font-size: 30px;
 
 }
 
@@ -70,9 +77,9 @@ main{
 
     position: absolute;
     background-color: red;
-    width: 10%;
-    top: 56% ;
-    left: 37.5%;
+    width: 12%;
+    top: 58% ;
+    left: 32.5%;
 }
 
 .input_search{
@@ -105,12 +112,12 @@ main{
     font-size: clamp(0px, 5vw, 12px);
     font-weight: 600;
     color: white;
-    background-color: #444;
+    background-color: #881b1b;
     box-shadow: -1px 2px 0 #222, -3px 5px 0 black;
     
 }
 .button:active{
 
-    box-shadow: inset 4px 4px #222;
+    box-shadow: inset 6px 6px #222;
     font-size: 11px;
 }
