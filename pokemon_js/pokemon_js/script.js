@@ -85,6 +85,6 @@ if(searchPokemon==50000){
 
   pokemonName = "Fernando_Graciane";
   pokemonNumber = 50000;
-  pokemonImg = ;
+  pokemonImg = 'prof.png';
 }
 
