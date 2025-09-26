@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD usuario</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1>Gerenciar usuários</h1>
+
+   <!--parte do cadastro (só pra eu n me perder)-->
+    <div>
+
+        <input type="hidden" id="id">
+        <input type="text" id="login" placeholder="login">
+        <input type="text" id="nome" placeholder="nome">
+        <input type="email" id="emais" placeholder="email">
+        <input type="password" id="senha" placeholder="senha">
+        <select id="ativo">
+            <option value="1">Ativo</option>
+            <option value="0">Inativo</option>
+        </select>
+        <button onclick="salvar()">Salvar</button>
+        <button onclick="limpar()">Cancelar</button>
+
+    </div>
+   <!--campo para pesquisar-->
+    <div>
+
+        <input type="text" id="pesquisa" placeholder="pesquisar por login ou nome">
+        <button onclick="carregarPesquisa()">Pesquisar</button>
+        <button onclick="carregar()">listar geral</button>
+
+    </div>
+
+    <table id="tabela">
+
+        <thead></thead>
+
+        <tr>
+            <th>ID</th>
+            <th>Login</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Ativo</th>
+            <th>Ações</th>
+            
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <script>
+
+    </script>
+
+
+</body>
+</html>
