@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>galeria de img</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, rgb(173, 229, 236), rgb(236, 206, 206));
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        
+        .galeria {
+            display: grid;
+         grid-template-columns: repeat(5, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .galeriaimg {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .galeriaimg:hover {
+            transform: scale(1.05);
+        }
+
+        #lb {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        #limg {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 3 3 20px #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Galeria</h1>
+
+    <div class="galeria">
+        <img src="img/1.jpg" class="galeriaimg">
+        <img src="img/2.jpg" class="galeriaimg">
+        <img src="img/3.jpg" class="galeriaimg">
+        <img src="img/4.jpg" class="galeriaimg">
+        <img src="img/5.jpg" class="galeriaimg">
+        <img src="img/6.jpg" class="galeriaimg">
+        <img src="img/7.jpg" class="galeriaimg">
+        <img src="img/8.jpg" class="galeriaimg">
+        <img src="img/9.jpg" class="galeriaimg">
+        <img src="img/10.jpg" class="galeriaimg">
+    </div>
+
+    <div id="lb">
+        <img id="limg" src="">
+    </div>
+
+    <script>
+        const imagens = document.querySelectorAll(".galeriaimg");
+        const lightbox = document.getElementById("lb");
+        const lightImg = document.getElementById("limg");
+
+        
+        imagens.forEach(img => {
+            img.addEventListener("click", () => {
+                lightImg.src = img.src;
+                lightbox.style.display = "flex";
+            });
+        });
+
+        
+        lightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+    </script>
+
+    <h6>baixei as imagens da internet</h6>
+    
+</body>
+</html>
